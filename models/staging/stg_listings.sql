@@ -60,11 +60,11 @@ select
   	   else NULL end as is_location_exact,
   nullif(country,'') as country,
   nullif(country_code,'') as country_code,
-  nullif(smart_location,'') as smart_location,
+  nullif(smart_location,'') as smart_location, --todo:junk formatting
   nullif(market,'') as market,
   nullif(zipcode,'') as zipcode,
-  nullif(state,'') as state,
-  nullif(city,'') as city,
+  nullif(upper(state),'') as state, --state should be upper-cased
+  TRIM(nullif(split_part(city,',',1),'')) as city, --if the city includes state information then drop it.
   nullif(neighbourhood_group_cleansed,'') as neighbourhood_group,
   nullif(neighbourhood_cleansed,'') as neighbourhood,
 --  nullif(neighbourhood,'') as neighbourhood,
