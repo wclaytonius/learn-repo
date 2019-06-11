@@ -1,6 +1,6 @@
 select
   host_id,
-  id,
+  id as listing_id,
   review_scores_value,
   review_scores_location,
   review_scores_communication,
