@@ -65,9 +65,9 @@ select
   nullif(zipcode,'') as zipcode,
   nullif(state,'') as state,
   nullif(city,'') as city,
-  nullif(neighbourhood_group_cleansed,'') as neighbourhood_group_cleansed,
-  nullif(neighbourhood_cleansed,'') as neighbourhood_cleansed,
-  nullif(neighbourhood,'') as neighbourhood,
+  nullif(neighbourhood_group_cleansed,'') as neighbourhood_group,
+  nullif(neighbourhood_cleansed,'') as neighbourhood,
+--  nullif(neighbourhood,'') as neighbourhood,
   nullif(street,'') as street,
   case when host_identity_verified='f' then FALSE
   	   when host_identity_verified='t' then TRUE
