@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_listings
+    columns:
+      - name: listing_id
+        tests:
+         - unique
+         - not_null
+
+  - name: dim_hosts
+    columns:
+      - name: host_id
+        tests:
+           - unique
+           - not_null
+
+  - name: dim_reviews
+    columns:
+      - name: reviewer_name
+        tests:
+           - unique
+           - not_null
