@@ -1,0 +1,9 @@
+select
+  review,
+  listing_id,
+  id,
+  comments,
+  reviewer_name,
+  date
+from
+  source_data.reviews
